@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h2 class="header__title">لیست تراکنش ها</h2>
+        <div class="header__search">
+            <input type="text" class="search-input" placeholder="جستجو تراکنش..."/>
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+    <main>
+        <section class="section">
+            <button class="btn">بارگذاری تراکنش ها</button>
+            <div class="table-container">
+                <h2>لیست تراکنش های شما</h2>
+                <table class="content-table">
+                    <thead>
+                    <tr>
+                        <th>ردیف</th>
+                        <th>نوع تراکنش</th>
+                        <th class="price">
+                            مبلغ
+                            <i class="fa fa-chevron-down"></i>
+                        </th>
+                        <th>شماره پیگیری</th>
+                        <th class="date">
+                            تاریخ تراکنش
+                            <i class="fa fa-chevron-down"></i>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
