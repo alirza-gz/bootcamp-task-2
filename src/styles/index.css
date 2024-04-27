@@ -34,7 +34,8 @@
     --color-primary-100: rgb(219, 226, 255);
     --color-primary-50: rgb(228, 233, 255);
 
-    --btn-primary-color: #7e7366;
+    /*========== btn Colors ==========*/
+    --btn-primary-color: #786754;
     --btn-secondary-color: #b58863;
 
     --border-radius-tiny: 3px;
@@ -136,16 +137,46 @@ html {
     padding: 16px 0;
     width: 360px;
     border: none;
+    position: relative;
     border-radius: 18px;
-    background-color: var(--btn-primary-color);
+    background-color: var(--btn-secondary-color);
     color: var(--color-secondary-0);
     cursor: pointer;
     margin-top: 20rem;
     transition: all 0.2s ease-in-out;
+    box-shadow: 0 18px 40px hsla(231, 56%, 56%, .3);
+    overflow: hidden;
 }
 
-.btn:hover {
-    background-color: var(--btn-secondary-color);
+
+.btn.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background: repeating-linear-gradient(60deg,
+    transparent,
+    transparent 0.75rem,
+    var(--btn-primary-color) 0.75rem,
+    var(--btn-primary-color) 1.5rem);
+    animation: load 1s infinite linear;
+}
+
+.btn__text{
+    position: relative;
+    font-weight: bold;
+}
+
+/* Loading button animation */
+@keyframes load {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1.75rem);
+    }
 }
 
 /* TABLE */

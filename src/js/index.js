@@ -18,6 +18,8 @@ sortDate.addEventListener("click", sortByDate);
  * @return {void} This function does not return a value.
  */
 function fetchTransactions() {
+    btn.classList.add("active");
+    btn.querySelector(".btn__text").innerText = "در حال بارگذاری تراکنش ها...";
     setTimeout(() => {
         btn.style.display = "none";
         tableContainer.style.display = "block";
@@ -28,7 +30,7 @@ function fetchTransactions() {
                 renderTransactions(res.data);
             })
             .catch((err) => console.log(err));
-    }, 300);
+    }, 2000);
 }
 
 /**
