@@ -85,8 +85,12 @@ function filterTransactions(e) {
     axios
         .get(url)
         .then((res) => {
-            allTransactionsData = res.data;
-            renderTransactions(allTransactionsData);
+            if (res.data.length === 0) {
+                transactionsDOM.innerHTML = `<div class="not-found">اطلاعاتی با این شماره تراکنش یافت نشد.</div>`;
+            } else {
+                allTransactionsData = res.data;
+                renderTransactions(allTransactionsData);
+            }
         })
         .catch((err) => console.log(err));
 }

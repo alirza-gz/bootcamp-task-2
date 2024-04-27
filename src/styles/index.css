@@ -245,7 +245,11 @@ html {
 
 .content-table tbody tr:hover {
     background-color: #f3f3f3;
-    font-weight: bold;
+}
+
+.content-table .tbody .not-found {
+    font-size: 1.6rem;
+    padding: 2rem 2rem 2rem 0;
 }
 
 tbody tr td:nth-child(2) {
