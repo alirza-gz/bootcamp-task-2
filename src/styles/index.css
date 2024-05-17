@@ -148,6 +148,10 @@ html {
     overflow: hidden;
 }
 
+.btn:focus{
+    outline: 4px solid var(--btn-primary-color);
+    outline-offset: 2px;
+}
 
 .btn.active::before {
     content: '';
@@ -250,6 +254,7 @@ html {
 .content-table .tbody .not-found {
     font-size: 1.6rem;
     padding: 2rem 2rem 2rem 0;
+    color: var(--color-red-500);
 }
 
 tbody tr td:nth-child(2) {
